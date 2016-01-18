@@ -1,7 +1,10 @@
-<h2>How it works</h2>
-<p>Plugin creates an invisible SVG element on your page, that contains blurring filters. On every animation frame it checks defference of current offset and offset, which was on previous animation frame by X and Y axes, multiplies it on the blurring intensity and sets the respective values on SVG filter</p>
+<h2>Using</h2>
+<p>You can use it on any element, that can change its position on the page, for example on sliders or modals. All motion of these objects will be accompanied by blurring. But it should be understood that SVG filter can blurring only in left-right or top-bottom directions. If your element moves diagonally that it may be unpretty</p>
 
-<h2>Blur Motion Effect API</h2>
+<h2>How it works</h2>
+<p>Plugin creates an invisible SVG element on your page, that contains blurring filters. On every animation frame it checks defference of current offset and offset, which was on previous animation frame by X and Y axes, multiplies it on the blurring intensity and sets the respective values on SVG filter.</p>
+
+<h2>API</h2>
 <h5>Init:</h5>
 ```
 $("selector").blurMotionEffect();
