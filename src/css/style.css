@@ -1,0 +1,160 @@
+@font-face {
+    font-family: "Patagonia";
+    src: url("../fonts/Patagonia/Patagonia.eot?") format("eot"),
+    url("../fonts/Patagonia/Patagonia.woff") format("woff"),
+    url("../fonts/Patagonia/Patagonia.ttf") format("truetype"),
+    url("../fonts/Patagonia/Patagonia.svg#svgFontName") format("svg");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Patagonia, calibri, arial, sans-serif;
+    font-size: 15px;
+    color: #333;
+    letter-spacing: 0.02em;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    padding-top: 50px;
+}
+
+.swiper-container {
+    width: 90%;
+    margin: 0 auto;
+}
+.swiper-wrapper {
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.swiper-slide {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+.slide-1 {
+    background-image: url(../images/slide-1.jpg);
+}
+.slide-2 {
+    background-image: url(../images/slide-2.jpg);
+}
+.slide-3 {
+    background-image: url(../images/slide-3.png);
+}
+.slide-4 {
+    background-image: url(../images/slide-4.jpg);
+}
+.slide-5 {
+    background-image: url(../images/slide-5.jpg);
+}
+.slide-6 {
+    background-image: url(../images/slide-6.jpg);
+}
+.slide-7 {
+    background-image: url(../images/slide-7.png);
+}
+.slide-8 {
+    background-image: url(../images/slide-8.jpg);
+}
+
+.popup-button {
+    border: none;
+    background: #2ecc71;
+    border-radius: 4px;
+    color: #fff;
+    padding: 10px 20px 5px;
+    display: block;
+    outline: none;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: all 200ms ease;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.popup-button:hover {
+    background: #2fd77a;
+}
+
+.popup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+.popup .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #000;
+    opacity: 0;
+    cursor: pointer;
+}
+.popup .content {
+    position: relative;
+    width: 250px;
+    height: 400px;
+    top: 50%;
+    margin-top: -200px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0,0,0,.8);
+    left: 100%;
+    margin-left: 350px;
+}
+
+.popup.opened {
+    visibility: visible;
+    transition: all 800ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.popup.opened .overlay {
+    opacity: 0.7;
+    transition: all 800ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.popup.opened .content {
+    left: 50%;
+    margin-left: -125px;
+    transition: all 800ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.popup.closed {
+    visibility: visible;
+}
+.popup.closed .overlay {
+    opacity: 0;
+    transition: all 800ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.popup.closed .content {
+    left: 0;
+    margin-left: -350px;
+    transition: all 800ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.popup .content .heading {
+    border-bottom: 1px solid #ccc;
+    font-size: 20px;
+    padding: 10px 20px 5px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.popup .content p {
+    padding: 0 20px;
+    margin-bottom: 15px;
+}
+
+.wrapper {
+    transition: all 500ms ease;
+}
+.wrapper.far-away {
+    transform: scale(0.9);
+}
