@@ -4,19 +4,6 @@
 <h2>How it works</h2>
 <p>Plugin creates an invisible SVG element on your page, that contains blurring filters. On every animation frame it checks defference of current offset and offset, which was on previous animation frame by X and Y axes, multiplies it on the blurring intensity and sets the respective values on SVG filter.</p>
 
-<p><b>Notice:</b> most of jQuery sliders are rebased their slides after scrolling for an infinite scroll. Therefore changing the offset, which means on one animation frame works blur effect. To avoid this flickering you should use events of start and end of scrolling. For example, for carouFredSel plugin it looks like:
-</p>
-```
-...
-onBefore: function () {
-	$(this).blurMotionEffect();
-},
-onAfter: function () {
-	$(this).destroyBlurMotionEffect();
-}
-...
-```
-
 <h2>API</h2>
 <h5>Init:</h5>
 ```
@@ -61,4 +48,17 @@ this can be obtained by using $("...").offset();
 $("selector").on("blurMotionEffectRender", function(){
   //do something
 });
+```
+
+<p><b>Notice:</b> most of jQuery sliders are rebased their slides after scrolling for an infinite scroll. Therefore changing the offset, which means on one animation frame works blur effect. To avoid this flickering you should use events of start and end of scrolling. For example, for carouFredSel plugin it looks like:
+</p>
+```
+...
+onBefore: function () {
+	$(this).blurMotionEffect();
+},
+onAfter: function () {
+	$(this).destroyBlurMotionEffect();
+}
+...
 ```
