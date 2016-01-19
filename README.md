@@ -26,7 +26,7 @@ $("selector").destroyBlurMotionEffect();
 | getBlurMotionFilter     | Get SVG Filter             | None                                 | jQuery element       |
 | createBlurMotionFilter  | Create SVG Filter          | None                                 | jQuery element       |
 | getBlurMotionValues     | Get actual blur values     | None                                 | Blur values object** |
-| setBlurMotionValues     | Set blur values            | Blur values object**                 | jQuery element*      |
+| setBlurMotionValues     | Set blur values            | Blur values object**                 | jQuery element       |
 ```
 * Offset object: 
 {
