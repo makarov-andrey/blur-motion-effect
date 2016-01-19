@@ -43,7 +43,7 @@ this can be obtained by using $("...").offset();
 ```
 
 <h5>Events:</h5>
-<p>You can binding on blurMotionEffectRender event. Be dangerous with performance, it will calling by every animation frame</p>
+<p>You can binding on blurMotionEffectRender event. Be dangerous with performance, it calls in every animation frame</p>
 ```
 $("selector").on("blurMotionEffectRender", function(){
   //do something
