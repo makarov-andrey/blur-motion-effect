@@ -31,14 +31,14 @@ $("selector").destroyBlurMotionEffect();
 * Offset object: 
 {
   x: 0, //number
-  y: 0 //number
+  y: 0  //number
 }
 this can be obtained by using $("...").offset();
 
 ** Blur values is an object, that contained information about the blurring element along the axes X and Y:
 {
   x: 0, //number
-  y: 0 //number
+  y: 0  //number
 }
 ```
 
