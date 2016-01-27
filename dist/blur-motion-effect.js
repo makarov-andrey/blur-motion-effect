@@ -19,6 +19,10 @@
     $.fn.destroyBlurMotionEffect = function () {
         this.removeClass(handClass);
         this.getBlurMotionFilter().remove();
+        this.css({
+            "filter": "",
+            "-webkit-filter": ""
+        });
         return this;
     };
 
