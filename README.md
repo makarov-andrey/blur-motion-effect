@@ -27,15 +27,18 @@ $("selector").destroyBlurMotionEffect();
 | createBlurMotionFilter  | Create SVG Filter          | None                                 | jQuery element       |
 | getBlurMotionValues     | Get actual blur values     | None                                 | Blur values object** |
 | setBlurMotionValues     | Set blur values            | Blur values object**                 | jQuery element       |
+
+<b>* Offset object:</b> 
 ```
-* Offset object: 
 {
   x: 0, //number
   y: 0  //number
 }
+```
 this can be obtained by using $("...").offset();
 
-** Blur values is an object, that contained information about the blurring element along the axes X and Y:
+<b>** Blur values is an object, that contained information about the blurring element along the axes X and Y:</b>
+```
 {
   x: 0, //number
   y: 0  //number
