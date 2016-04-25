@@ -1,8 +1,8 @@
 <h2>Using</h2>
-<p>You can use it on any element, that can change its position on the page, for example on sliders or modals. All motion of these objects will be accompanied by blurring. But it should be understood that SVG filter can blurring only in left-right or top-bottom directions. If your element moves diagonally that it may be unpretty</p>
+<p>You can use it on any element that can change its position on the page, for example on sliders or modals. All motion of these objects relocate with blurring. Do not forget that SVG filter blurs only in left-right or top-bottom directions. If your element moves diagonal it may looks unpretty.</p>
 
-<h2>How it works</h2>
-<p>Plugin creates an invisible SVG element on your page, that contains blurring filters. It checks defference of current offset and offset, which was on previous animation frame by X and Y axes, multiplies it on the blurring intensity and sets the respective values on SVG filter on every animation frame .</p>
+<h2>How does it work</h2>
+<p>Plugin creates an invisible SVG element on your page that contains blurring filters. It checks the difference between current and previous offsets animation frame by X and Y axes, then multiplies it on the blurring intensity and sets the respective values on SVG filter on every animation frame. </p>
 
 <h2>API</h2>
 <h5>Init:</h5>
@@ -35,7 +35,7 @@ $("selector").destroyBlurMotionEffect();
   y: 0  //number
 }
 ```
-this can be obtained by using $("...").offset();
+that can be obtained by using $("...").offset();
 
 <b>** Blur values is an object, that contained information about the blurring element along the axes X and Y:</b>
 ```
@@ -46,14 +46,14 @@ this can be obtained by using $("...").offset();
 ```
 
 <h5>Events:</h5>
-<p>You can bind blurMotionEffectRender event. Be dangerous with performance. It calls in every animation frame</p>
+<p>You can bind blurMotionEffectRender event. Be careful with this action. It calls in every animation frame</p>
 ```
 $("selector").on("blurMotionEffectRender", function(){
   //do something
 });
 ```
 
-<p><b>Notice:</b> most of jQuery sliders are rebased their slides after scrolling for an infinite scroll. Therefore changing the offset, which means on one animation frame works blur effect. To avoid this flickering you should use events of start and end of scrolling. For example, for carouFredSel plugin it looks like:
+<p><b>Notice:</b> most of jQuery sliders rebase its slides after scrolling for an infinite scroll. Therefore the slider would blur after changing  the offset in one animation frame. To avoid this flickering you should use events of start and end of scrolling. For example, for carouFredSel plugin it looks like:
 </p>
 ```
 ...
