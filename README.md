@@ -1,5 +1,5 @@
 <h2>Using</h2>
-<p>You can use it on any element that can change its position on the page, for example on sliders or modals. All motion of these objects relocate with blurring. Do not forget that SVG filter blurs only in left-right or top-bottom directions. If your element moves diagonal it may be spoiled.</p>
+<p>You can use it on any element that can change its position on the page, for example on sliders or modals. All motion of these objects will be accompanied by blurring. Do not forget that SVG filter blurs only in left-right or top-bottom directions. If your element moves diagonal it may be spoiled.</p>
 
 <h2>How does it work</h2>
 <p>Plugin creates an invisible SVG element on your page that contains blurring filters. It checks the difference between offsets of current and previous animation frame by X and Y axes, then multiplies it on the blurring intensity and sets the respective values on SVG filter on every animation frame. </p>
