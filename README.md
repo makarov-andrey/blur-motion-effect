@@ -15,18 +15,18 @@ $("selector").destroyBlurMotionEffect();
 ```
 
 <h5>Functions:</h5>
-| Function                | Description                | Parametres                           | Returned value       |
-| ------------------------| -------------------------- | ------------------------------------ | -------------------- |
-| blurMotionEffect        | Init blur motion effect    | (number) intensity (default is 0.25) | jQuery element       |
-| destroyBlurMotionEffect | Destroy blur motion effect | None                                 | jQuery element       |
-| setBlurMotionIntensity  | Set blur intensity         | (number) intensity (default is 0.25) | jQuery element       |
-| getBlurMotionIntensity  | Get blur intensity         | None                                 | Float intensity      |
-| setBlurMotionLastOffset | Set last offset            | Offset object*                       | jQuery element       |
-| getBlurMotionLastOffset | Get last offset            | None                                 | Offset object*       |
-| getBlurMotionFilter     | Get SVG Filter             | None                                 | jQuery element       |
-| createBlurMotionFilter  | Create SVG Filter          | None                                 | jQuery element       |
-| getBlurMotionValues     | Get actual blur values     | None                                 | Blur values object** |
-| setBlurMotionValues     | Set blur values            | Blur values object**                 | jQuery element       |
+| Function                 | Parametres                           | Returned value       |
+| ------------------------ | ------------------------------------ | -------------------- |
+| blurMotionEffect         | (number) intensity (default is 0.25) | jQuery element       |
+| destroyBlurMotionEffect  | None                                 | jQuery element       |
+| setBlurMotionIntensity   | (number) intensity (default is 0.25) | jQuery element       |
+| getBlurMotionIntensity   | None                                 | Float intensity      |
+| setBlurMotionLastOffset  | Offset object*                       | jQuery element       |
+| getBlurMotionLastOffset  | None                                 | Offset object*       |
+| getBlurMotionFilter      | None                                 | jQuery element       |
+| createBlurMotionFilter   | None                                 | jQuery element       |
+| getBlurMotionValues      | None                                 | Blur values object** |
+| setBlurMotionValues      | Blur values object**                 | jQuery element       |
 
 <b>* Offset object:</b> 
 ```
