@@ -1,4 +1,4 @@
-<h2>Using</h2>
+<h2>Usage</h2>
 <p>You can use it on any element that can change its position on the page, for example on sliders or modals. All motion of these objects will be accompanied by blurring. Do not forget that SVG filter blurs only in left-right or top-bottom directions. If your element moves diagonal it may be spoiled.</p>
 
 <h2>How does it work</h2>
