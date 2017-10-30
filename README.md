@@ -6,62 +6,69 @@
 
 <h2>API</h2>
 <h5>Init:</h5>
-```
+
+```javascript
 $("selector").blurMotionEffect();
 ```
+
 <h5>Destroy:</h5>
-```
+
+```javascript
 $("selector").destroyBlurMotionEffect();
 ```
 
 <h5>Functions:</h5>
-| Function                 | Parametres                           | Returned value       |
+
+| Function                 | Parameters                           | Returned value       |
 | ------------------------ | ------------------------------------ | -------------------- |
-| blurMotionEffect         | (number) intensity (default is 0.25) | jQuery element       |
-| destroyBlurMotionEffect  | None                                 | jQuery element       |
-| setBlurMotionIntensity   | (number) intensity (default is 0.25) | jQuery element       |
-| getBlurMotionIntensity   | None                                 | Float intensity      |
-| setBlurMotionLastOffset  | Offset object*                       | jQuery element       |
-| getBlurMotionLastOffset  | None                                 | Offset object*       |
-| getBlurMotionFilter      | None                                 | jQuery element       |
-| createBlurMotionFilter   | None                                 | jQuery element       |
-| getBlurMotionValues      | None                                 | Blur values object** |
-| setBlurMotionValues      | Blur values object**                 | jQuery element       |
+| blurMotionEffect         | (number) intensity (default is 0.25) | jQuery collection    |
+| destroyBlurMotionEffect  | -                                    | jQuery collection    |
+| setBlurMotionIntensity   | (number) intensity (default is 0.25) | jQuery collection    |
+| getBlurMotionIntensity   | -                                    | number               |
+| setBlurMotionLastOffset  | Offset object*                       | jQuery collection    |
+| getBlurMotionLastOffset  | -                                    | Offset object*       |
+| getBlurMotionFilter      | -                                    | jQuery collection    |
+| createBlurMotionFilter   | -                                    | jQuery collection    |
+| getBlurMotionValues      | -                                    | Blur values object** |
+| setBlurMotionValues      | Blur values object**                 | jQuery collection    |
 
 <b>* Offset object:</b> 
-```
-{
-  x: 0, //number
-  y: 0  //number
+
+```javascript
+var offset = {
+  x: 0,
+  y: 0
 }
 ```
 that can be obtained by using $("...").offset();
 
 <b>** Blur values is an object, that contained information about the blurring element along the axes X and Y:</b>
-```
-{
-  x: 0, //number
-  y: 0  //number
+
+```javascript
+var blur = {
+  x: 0,
+  y: 0
 }
 ```
 
 <h5>Events:</h5>
 <p>You can bind blurMotionEffectRender event. Be careful with this action. It calls in every animation frame</p>
-```
+
+```javascript
 $("selector").on("blurMotionEffectRender", function(){
   //do something
 });
 ```
 
-<p><b>Notice:</b> most of jQuery sliders rebase its slides after scrolling for an infinite scroll. Therefore the slider would blur after changing  the offset in one animation frame. To avoid this flickering you should use events of start and end of scrolling. For example, for carouFredSel plugin it looks like:
-</p>
-```
-...
-onBefore: function () {
-	$(this).blurMotionEffect();
-},
-onAfter: function () {
-	$(this).destroyBlurMotionEffect();
-}
-...
+<p><b>Notice:</b> most of jQuery sliders rebase its slides after scrolling for an infinite scroll. Therefore the slider would blur after changing  the offset in one animation frame. To avoid this flickering you should use events of start and end of scrolling. For example, for carouFredSel plugin it looks like:</p>
+
+```javascript
+$("#carousel").carouFredSel({
+    onBefore: function () {
+    	$(this).blurMotionEffect();
+    },
+    onAfter: function () {
+    	$(this).destroyBlurMotionEffect();
+    }
+});
 ```
